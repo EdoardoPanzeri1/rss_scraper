@@ -3,8 +3,9 @@ package main
 import (
 	"encoding/json"
 	"net/http"
-	"rss_scraper/internal/database"
 	"time"
+
+	"github.com/EdoardoPanzeri1/rss_scraper/internal/database"
 
 	"github.com/EdoardoPanzeri1/rss_scraper/auth"
 	"github.com/google/uuid"

@@ -5,7 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"rss_scraper/internal/database"
+
+	"github.com/EdoardoPanzeri1/rss_scraper/internal/database"
 
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"

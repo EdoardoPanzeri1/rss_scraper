@@ -1,4 +1,4 @@
-module rss_scraper
+module github.com/EdoardoPanzeri1/rss_scraper
 
 go 1.22.3
 

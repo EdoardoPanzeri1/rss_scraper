@@ -1,8 +1,9 @@
 package main
 
 import (
-	"rss_scraper/internal/database"
 	"time"
+
+	"github.com/EdoardoPanzeri1/rss_scraper/internal/database"
 
 	"github.com/google/uuid"
 )
