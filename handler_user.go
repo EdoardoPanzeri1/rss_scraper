@@ -6,6 +6,7 @@ import (
 	"rss_scraper/internal/database"
 	"time"
 
+	"github.com/EdoardoPanzeri1/rss_scraper/auth"
 	"github.com/google/uuid"
 )
 
@@ -29,6 +30,22 @@ func (cfg *apiConfig) handlerUsersCreate(w http.ResponseWriter, r *http.Request)
 	})
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "Couldn't create user")
+		return
+	}
+
+	respondWithJSON(w, http.StatusOK, databaseUserToUser(user))
+}
+
+func (cfg *apiConfig) handlerUsersGet(w http.ResponseWriter, r *http.Request) {
+	apiKey, err := auth.GetAPIKey(r.Header)
+	if err != nil {
+		respondWithError(w, http.StatusUnauthorized, "Couldn't find api key")
+		return
+	}
+
+	user, err := cfg.DB.GetUserByAPIKey(r.Context(), apiKey)
+	if err != nil {
+		respondWithError(w, http.StatusNotFound, "Couldn't get user")
 		return
 	}
 
