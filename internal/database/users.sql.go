@@ -7,18 +7,21 @@ package database
 
 import (
 	"context"
+	"time"
+
+	"github.com/google/uuid"
 )
 
 const createUser = `-- name: CreateUser :one
-insert into users (id, created_at, updated_at, name)
-values ($1, $2, $3, $4)
-returning id, created_at, updated_at, name
+INSERT INTO users (id, created_at, updated_at, name)
+VALUES ($1, $2, $3, $4)
+RETURNING id, created_at, updated_at, name
 `
 
 type CreateUserParams struct {
-	ID        int32
-	CreatedAt string
-	UpdatedAt string
+	ID        uuid.UUID
+	CreatedAt time.Time
+	UpdatedAt time.Time
 	Name      string
 }
 

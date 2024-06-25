@@ -4,9 +4,15 @@
 
 package database
 
+import (
+	"time"
+
+	"github.com/google/uuid"
+)
+
 type User struct {
-	ID        int32
-	CreatedAt string
-	UpdatedAt string
+	ID        uuid.UUID
+	CreatedAt time.Time
+	UpdatedAt time.Time
 	Name      string
 }
