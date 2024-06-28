@@ -7,8 +7,8 @@ import (
 	"os"
 
 	"github.com/EdoardoPanzeri1/rss_scraper/internal/database"
-
 	"github.com/joho/godotenv"
+
 	_ "github.com/lib/pq"
 )
 
@@ -46,6 +46,10 @@ func main() {
 
 	mux.HandleFunc("POST /v1/feeds", apiCfg.middlewareAuth(apiCfg.handlerFeedCreate))
 	mux.HandleFunc("GET /v1/feeds", apiCfg.handlerFeedGet)
+
+	mux.HandleFunc("GET /v1/feed_follows", apiCfg.middlewareAuth(apiCfg.handlerFeedFollowsGet))
+	mux.HandleFunc("POST /v1/feed_follows", apiCfg.middlewareAuth(apiCfg.handlerFeedFollowCreate))
+	mux.HandleFunc("DELETE /v1/feed_follows/{feedFollowID}", apiCfg.middlewareAuth(apiCfg.handlerFeedFollowDelete))
 
 	mux.HandleFunc("GET /v1/healtz", handlerReadiness)
 	mux.HandleFunc("GET /v1/err", handlerErr)
