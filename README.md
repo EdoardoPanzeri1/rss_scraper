@@ -92,8 +92,8 @@ All endpoints requiring authorization use an API key in the headers.
 ## DEPENDENCIES
 This project uses the following third-party libraries:
 
-sqlc: sqlc.dev - Generates type-safe Go code from SQL.
-goose: GitHub repository - A database migration tool.
-godotenv: GitHub repository - Loads environment variables from .env files.
-pq: GitHub repository - A pure Go Postgres driver for the database/sql package.
+- sqlc: sqlc.dev - Generates type-safe Go code from SQL.
+- goose: GitHub repository - A database migration tool.
+- godotenv: GitHub repository - Loads environment variables from .env files.
+- pq: GitHub repository - A pure Go Postgres driver for the database/sql package.
 Please ensure to review the licenses of these libraries for compliance.
