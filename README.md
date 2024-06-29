@@ -89,7 +89,7 @@ All endpoints requiring authorization use an API key in the headers.
 
    Get Posts: `GET /v1/posts` - List posts from followed feeds.
 
-## DEPENDENCIES
+## Dependencies
 This project uses the following third-party libraries:
 
 - [sqlc](https://sqlc.dev/): sqlc.dev - Generates type-safe Go code from SQL.
