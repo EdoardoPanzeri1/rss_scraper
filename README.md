@@ -27,3 +27,47 @@ git clone https://github.com/your-username/rss-scraper.git
 
 # Navigate into the project directory
 cd rss-scraper
+```
+
+
+RUNNING THE PROJECT
+To run the project, use the following commands:
+
+# Install dependencies
+go mod tidy
+
+# Run the application
+go run main.go
+Copy icon
+USING THE API
+You can use Thunder Client or Postman to interact with the API. Here are the available endpoints and their descriptions:
+
+AUTHORIZATION
+Your API has middleware for authentication that requires an API key to be passed in the headers.
+
+API Key Header:
+Header: "Authorization: Bearer YOUR_API_KEY"
+Copy icon
+USERS
+Create a User
+
+Method: POST
+Endpoint: /v1/users
+Body:
+{
+  "username": "exampleUser",
+  "password": "examplePass"
+}
+Copy icon
+Get User
+
+Method: GET
+
+Endpoint: /v1/users
+
+Authorization: Requires authentication
+
+Example using curl:
+
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     -X GET http://localhost:8080/v1/users
