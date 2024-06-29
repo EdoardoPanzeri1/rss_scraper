@@ -14,7 +14,11 @@ Welcome to your RSS Scraper project! This tool allows users to collect, follow, 
 
 Before you begin, ensure you have Go installed on your machine. You will also need an external client like [Thunder Client](https://www.thunderclient.io/) or [Postman](https://www.postman.com/) for interacting with the API.
 
+Additionally, you'll need `sqlc` and `goose` for handling database interactions and migrations:
+
 - [Go](https://golang.org/doc/install)
+- [sqlc](https://sqlc.dev/)
+- [goose](https://github.com/pressly/goose)
 - [Thunder Client (VS Code Extension)](https://www.thunderclient.io/) or [Postman](https://www.postman.com/)
 
 ### Installation
@@ -28,8 +32,24 @@ git clone https://github.com/your-username/rss-scraper.git
 # Navigate into the project directory
 cd rss-scraper
 ```
+DATABASE SETUP
+Install and configure goose:
 
+# Install goose CLI
+```bash
+go install github.com/pressly/goose/v3/cmd/goose@latest
 
+# Run migrations
+goose up
+```
+Generate Go code from SQL queries using sqlc:
+
+# Install sqlc CLI
+go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
+
+# Generate code
+sqlc generate
+Copy icon
 RUNNING THE PROJECT
 To run the project, use the following commands:
 
@@ -38,36 +58,3 @@ go mod tidy
 
 # Run the application
 go run main.go
-Copy icon
-USING THE API
-You can use Thunder Client or Postman to interact with the API. Here are the available endpoints and their descriptions:
-
-AUTHORIZATION
-Your API has middleware for authentication that requires an API key to be passed in the headers.
-
-API Key Header:
-Header: "Authorization: Bearer YOUR_API_KEY"
-Copy icon
-USERS
-Create a User
-
-Method: POST
-Endpoint: /v1/users
-Body:
-{
-  "username": "exampleUser",
-  "password": "examplePass"
-}
-Copy icon
-Get User
-
-Method: GET
-
-Endpoint: /v1/users
-
-Authorization: Requires authentication
-
-Example using curl:
-
-curl -H "Authorization: Bearer YOUR_API_KEY" \
-     -X GET http://localhost:8080/v1/users
