@@ -79,8 +79,10 @@ All endpoints requiring authorization use an API key in the headers.
   Get User: GET /v1/users - Retrieve the authenticated user's details.
   ```
 - **FEEDS:**
+  ```http
   Create Feed: POST /v1/feeds - Add a new RSS feed.
   Get Feeds: GET /v1/feeds - List all available feeds.
+  ```
 - **FEED FOLLOWS:**
   Get Feed Follows: GET /v1/feed_follows - List feeds followed by the user.
   Follow Feed: POST /v1/feed_follows - Follow a specific feed.
