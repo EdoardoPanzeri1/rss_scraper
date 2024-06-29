@@ -32,7 +32,7 @@ git clone https://github.com/your-username/rss-scraper.git
 # Navigate into the project directory
 cd rss-scraper
 ```
-###DATABASE SETUP
+### DATABASE SETUP
 Install and configure goose:
 
 ```bash
@@ -51,7 +51,7 @@ go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 # Generate code
 sqlc generate
 ```
-##RUNNING THE PROJECT
+### RUNNING THE PROJECT
 To run the project, use the following commands:
 ```bash
 # Install dependencies
