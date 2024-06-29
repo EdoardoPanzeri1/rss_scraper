@@ -33,7 +33,7 @@ git clone https://github.com/your-username/rss-scraper.git
 cd rss-scraper
 ```
 ### Database Setup
-Install and configure goose:
+Install and configure `goose`:
 
 ```bash
 # Install goose CLI
@@ -42,7 +42,7 @@ go install github.com/pressly/goose/v3/cmd/goose@latest
 # Run migrations
 goose up
 ```
-Generate Go code from SQL queries using sqlc:
+Generate Go code from SQL queries using `sqlc`:
 
 ```bash
 # Install sqlc CLI
@@ -73,28 +73,28 @@ All endpoints requiring authorization use an API key in the headers.
   Header: "Authorization: Bearer YOUR_API_KEY"
 - **USERS:**
 
-  Create User: POST /v1/users - Register a new user.
-  Get User: GET /v1/users - Retrieve the authenticated user's details.
+  Create User: `POST /v1/users` - Register a new user.
+  Get User: `GET /v1/users` - Retrieve the authenticated user's details.
 - **FEEDS:**
 
-  Create Feed: POST /v1/feeds - Add a new RSS feed.
-  Get Feeds: GET /v1/feeds - List all available feeds.
+  Create Feed: `POST /v1/feeds` - Add a new RSS feed.
+  Get Feeds: `GET /v1/feeds` - List all available feeds.
 
 - **FEED FOLLOWS:**
 
-  Get Feed Follows: GET /v1/feed_follows - List feeds followed by the user.
-  Follow Feed: POST /v1/feed_follows - Follow a specific feed.
-  Unfollow Feed: DELETE /v1/feed_follows/{feedFollowID} - Unfollow a specific feed.
+  Get Feed Follows: `GET /v1/feed_follows` - List feeds followed by the user.
+  Follow Feed: `POST /v1/feed_follows` - Follow a specific feed.
+  Unfollow Feed: `DELETE /v1/feed_follows/{feedFollowID}` - Unfollow a specific feed.
 - **POSTS:**
 
-   Get Posts: GET /v1/posts - List posts from followed feeds.
+   Get Posts: `GET /v1/posts` - List posts from followed feeds.
 
 ## DEPENDENCIES
 This project uses the following third-party libraries:
 
 - sqlc: sqlc.dev - Generates type-safe Go code from SQL.
 - goose: GitHub repository - A database migration tool.
-- godotenv: GitHub repository - Loads environment variables from .env files.
+- godotenv: GitHub repository - Loads environment variables from `.env` files.
 - pq: GitHub repository - A pure Go Postgres driver for the database/sql package.
 
 Please ensure to review the licenses of these libraries for compliance.
