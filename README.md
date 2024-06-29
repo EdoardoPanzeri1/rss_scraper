@@ -32,11 +32,11 @@ git clone https://github.com/your-username/rss-scraper.git
 # Navigate into the project directory
 cd rss-scraper
 ```
-DATABASE SETUP
+###DATABASE SETUP
 Install and configure goose:
 
-# Install goose CLI
 ```bash
+# Install goose CLI
 go install github.com/pressly/goose/v3/cmd/goose@latest
 
 # Run migrations
@@ -44,17 +44,19 @@ goose up
 ```
 Generate Go code from SQL queries using sqlc:
 
+```bash
 # Install sqlc CLI
 go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 
 # Generate code
 sqlc generate
-Copy icon
-RUNNING THE PROJECT
+```
+##RUNNING THE PROJECT
 To run the project, use the following commands:
-
+```bash
 # Install dependencies
 go mod tidy
 
 # Run the application
 go run main.go
+```
