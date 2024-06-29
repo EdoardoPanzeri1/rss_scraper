@@ -32,7 +32,7 @@ git clone https://github.com/your-username/rss-scraper.git
 # Navigate into the project directory
 cd rss-scraper
 ```
-### DATABASE SETUP
+### Database Setup
 Install and configure goose:
 
 ```bash
@@ -51,7 +51,7 @@ go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 # Generate code
 sqlc generate
 ```
-### RUNNING THE PROJECT
+### Running the Project
 To run the project, use the following commands:
 ```bash
 # Install dependencies
@@ -60,3 +60,14 @@ go mod tidy
 # Run the application
 go run main.go
 ```
+### Using the API
+
+You can use Thunder Client or Postman to interact with the API. Below are the available endpoints with brief descriptions:
+
+#### Authorization
+
+All endpoints requiring authorization use an API key in the headers.
+
+- **API Key Header:**
+  ```http
+  Header: "Authorization: Bearer YOUR_API_KEY"
