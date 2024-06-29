@@ -1,6 +1,6 @@
 # RSS Scraper
 
-Welcome to your RSS Scraper project! This tool allows users to collect, follow, and manage RSS feeds efficiently.
+The RSS Scraper project allows users to collect, follow, and manage RSS feeds efficiently.
 
 ## Features
 
