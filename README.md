@@ -26,7 +26,7 @@ Additionally, you'll need `sqlc` and `goose` for handling database interactions 
 Follow these steps to clone and set up the repository:
 
 ```bash
-# Clone the repository
+#Clone the repository
 git clone https://github.com/your-username/rss-scraper.git
 
 # Navigate into the project directory
