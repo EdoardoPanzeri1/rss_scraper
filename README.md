@@ -69,23 +69,22 @@ You can use Thunder Client or Postman to interact with the API. Below are the av
 All endpoints requiring authorization use an API key in the headers.
 
 - **API Key Header:**
-  ```http
-  Header: "Authorization: Bearer YOUR_API_KEY"
-  ```
 
+  Header: "Authorization: Bearer YOUR_API_KEY"
 - **USERS:**
-  ```http
+
   Create User: POST /v1/users - Register a new user.
   Get User: GET /v1/users - Retrieve the authenticated user's details.
-  ```
 - **FEEDS:**
-  ```http
+
   Create Feed: POST /v1/feeds - Add a new RSS feed.
   Get Feeds: GET /v1/feeds - List all available feeds.
-  ```
+
 - **FEED FOLLOWS:**
+
   Get Feed Follows: GET /v1/feed_follows - List feeds followed by the user.
   Follow Feed: POST /v1/feed_follows - Follow a specific feed.
   Unfollow Feed: DELETE /v1/feed_follows/{feedFollowID} - Unfollow a specific feed.
 - **POSTS:**
-  Get Posts: GET /v1/posts - List posts from followed feeds.
+
+   Get Posts: GET /v1/posts - List posts from followed feeds.
