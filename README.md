@@ -74,8 +74,10 @@ All endpoints requiring authorization use an API key in the headers.
   ```
 
 - **USERS:**
+  ```http
   Create User: POST /v1/users - Register a new user.
   Get User: GET /v1/users - Retrieve the authenticated user's details.
+  ```
 - **FEEDS:**
   Create Feed: POST /v1/feeds - Add a new RSS feed.
   Get Feeds: GET /v1/feeds - List all available feeds.
